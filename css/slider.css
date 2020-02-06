@@ -3,10 +3,10 @@
 	margin: 0;
 }
 .slider1{
-    border: 5px solid pink;
+    border: 5px solid black;
     position: relative; 
     overflow: hidden;
-    background-color: rgb(138, 21, 173);
+    background-color:white;
     margin: 100px;
     width: 780px;
     height: 350px;
@@ -96,10 +96,10 @@
 		opacity: 0; 
 	}     
 	50% {
-		left: -1536px; opacity: 1; 
+		left: -1560px; opacity: 1; 
 	}     
 	70% {
-		left: -1536px; opacity: 1; 
+		left: -1560px; opacity: 1; 
 	}     
 	72% {
 		opacity: 0; 
@@ -108,13 +108,13 @@
 		opacity: 0; 
 	}    
 	75% {
-		left: -2304px; opacity: 1; 
+		left: -2340px; opacity: 1; 
 	}   	
 	95% {
-		left: -2304px; opacity: 1; 
+		left: -2340px; opacity: 1; 
 	}   	
 	97% { 
-		left: -2304px; opacity: 0; 
+		left: -2340px; opacity: 0; 
 	} 
 
 	100% {
@@ -152,10 +152,10 @@
             opacity: 0; 
         }     
         50% {
-            left: -1536px; opacity: 1; 
+            left: -1560px; opacity: 1; 
         }     
         70% {
-            left: -1536px; opacity: 1; 
+            left: -1560px; opacity: 1; 
         }     
         72% {
             opacity: 0; 
@@ -164,13 +164,13 @@
             opacity: 0; 
         }    
         75% {
-            left: -2304px; opacity: 1; 
+            left: -2340px; opacity: 1; 
         }   	
         95% {
-            left: -2304px; opacity: 1; 
+            left: -2340px; opacity: 1; 
         }   	
         97% { 
-            left: -2304px; opacity: 0;
+            left: -2340px; opacity: 0;
         }   	
         100% {
             left: 0; opacity: 0; 
@@ -207,10 +207,10 @@
 		opacity: 0; 
 	}     
 	50% {
-		left: -1536px; opacity: 1; 
+		left: -1560px; opacity: 1; 
 	}     
 	70% {
-		left: -1536px; opacity: 1; 
+		left: -1560px; opacity: 1; 
 	}     
 	72% {
 		opacity: 0; 
@@ -219,13 +219,13 @@
 		opacity: 0; 
 	}    
 	75% {
-		left: -2304px; opacity: 1; 
+		left: -2340px; opacity: 1; 
 	}   	
 	95% {
-		left: -2304px; opacity: 1; 
+		left: -2340px; opacity: 1; 
 	}   	
 	97% { 
-		left: -2304px; opacity: 0;
+		left: -2340px; opacity: 0;
 	}   	
 	100% {
 		left: 0; opacity: 0; 
@@ -262,10 +262,10 @@
 		opacity: 0; 
 	}     
 	50% {
-		left: -1536px; opacity: 1; 
+		left: -1560px; opacity: 1; 
 	}     
 	70% {
-		left: -1536px; opacity: 1; 
+		left: -1560px; opacity: 1; 
 	}     
 	72% {
 		opacity: 0; 
@@ -274,13 +274,13 @@
 		opacity: 0; 
 	}    
 	75% {
-		left: -2304px; opacity: 1; 
+		left: -2340px; opacity: 1; 
 	}   	
 	95% {
-		left: -2304px; opacity: 1; 
+		left: -2340px; opacity: 1; 
 	}   	
 	97% { 
-		left: -2304px; opacity: 0;
+		left: -2340px; opacity: 0;
 	}   	
 	100% {
 		left: 0; opacity: 0; 
