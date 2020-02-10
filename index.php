@@ -7,8 +7,8 @@
 </head>
 <body>
 <?php
-echo "<hr>Hello World!<br>";
-print "I'm Learning PHP Script Language Now<br><hr>";
+    echo "<hr>Hello World!<br>";
+    print "I'm Learning PHP Script Language Now<br><hr>";
 ?>
 <?php
     $a=10;
@@ -20,6 +20,16 @@ print "I'm Learning PHP Script Language Now<br><hr>";
         echo ($b)+($a);
     }
     myTest();
-?>
+?><br><hr>
+<?php
+    // global $a;
+    // $a="Nama<br>";
+    // $b="Muhammad Rifqi";
+    // echo $a.$b;
+
+    $GLOBALS["a"]="Nama<br>";
+    $GLOBALS["b"]="Muhammad Rifqi";
+    echo $a.$b;
+?><br><hr>
 </body>
 </html>
