@@ -3,33 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ASSETS</title>
+    <link rel="stylesheet" href="assets/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-grid.css.map">
+    <link rel="stylesheet" href="assets/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-grid.min.css.map">
+    <link rel="stylesheet" href="assets/css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-reboot.css.map">
+    <link rel="stylesheet" href="assets/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-reboot.min.css.map">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.css.map">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css.map">
 </head>
 <body>
-<?php
-    echo "<hr>Hello World!<br>";
-    print "I'm Learning PHP Script Language Now<br><hr>";
-?>
-<?php
-    $a=10;
-    $b=5;
-    function myTest()
-    {
-        global $a;
-        global $b;
-        echo ($b)+($a);
-    }
-    myTest();
-?><br><hr>
-<?php
-    // global $a;
-    // $a="Nama<br>";
-    // $b="Muhammad Rifqi";
-    // echo $a.$b;
 
-    $GLOBALS["a"]="Nama<br>";
-    $GLOBALS["b"]="Muhammad Rifqi";
-    echo $a.$b;
-?><br><hr>
+
+<script src="assets/js/bootstrap.bundle.js"></script>
+<script src="assets/js/bootstrap.bundle.js.map"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js.map"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script src="assets/js/bootstrap.js.map"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/bootstrap.min.js.map"></script>
 </body>
 </html>
