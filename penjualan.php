@@ -125,4 +125,32 @@
             echo "$minggu";
         else
             echo "Tahun Baru";
+    
+    echo "<hr>";
+
+    $nama = "Muhammad Rifqi";
+    $nim = "1304101010060";
+    $jurusan = "Teknik Sipil";
+    $a = 83;
+    $b = 72;
+    $c = 65;
+    $d = 50;
+    $e = 0;
+    $nilai = "50";
+        if ($nilai <= $d)
+            echo "Grade yang Diperoleh oleh : $nama ($nim) Jurusan $jurusan adalah E";
+        else if ($nilai <= $c)
+            echo "Grade yang Diperoleh oleh : $nama ($nim) Jurusan $jurusan adalah D";
+        else if ($nilai <= $b)
+            echo "Grade yang Diperoleh oleh : $nama ($nim) Jurusan $jurusan adalah C";
+        else if ($nilai <= $a) 
+            echo "Grade yang Diperoleh oleh : $nama ($nim) Jurusan $jurusan adalah B";
+        else if ($nilai > $a)
+            echo "Grade yang Diperoleh oleh : $nama ($nim) Jurusan $jurusan adalah A";
+        else
+            echo "Nilai Belum Terisi";
+    
+    echo "<hr>";
+
+    
 ?>
