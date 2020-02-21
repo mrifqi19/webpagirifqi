@@ -76,10 +76,9 @@ include'assets/navbar.php';
         </div>
         </center>
     </div>
-
+    <?php
+    include'assets/footer.php';
+    include'assets/js.php';
+    ?>
 </body>
 </html>
-<?php
-include'assets/footer.php';
-include'assets/js.php';
-?>
