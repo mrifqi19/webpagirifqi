@@ -9,7 +9,7 @@ include"../koneksi/koneksi.php";
         $login=mysqli_query($koneksi,"SELECT * FROM user WHERE username='$username' and password='$password'");
         // pengecekan
         $cek=mysqli_num_rows($login);
-        // menamoilkan definisi data
+        // menampilkan definisi data
         $data=mysqli_fetch_assoc($login);
 
         if($cek>0){
@@ -19,12 +19,12 @@ include"../koneksi/koneksi.php";
                 $_SESSION['status']='login';
                 header('location:../index.php');
             }
-        elseif($data['level']=="user"){
-            $_SESSION['username']=$data['username'];
-            $_SESSION['level']=$data['level'];
-            $_SESSION['status']='login';
-            header('location:../bootstrap_nilai.php');
-        }
+            elseif($data['level']=="user"){
+                $_SESSION['username']=$data['username'];
+                $_SESSION['level']=$data['level'];
+                $_SESSION['status']='login';
+                header('location:../bootstrap_nilai.php');
+            }
         }
         else{
         echo"Login Gagal";
