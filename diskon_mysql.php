@@ -37,36 +37,32 @@
                 <div class="col-sm-3">
                 <input type="text" class="form-control" name="kategori" placeholder="Masukkan Kategori Barang">
                 </div>
-            </div><br>
-            <!-- <div class="form-group row">
+            </div>
+            <div class="form-group row">
                 <label for="inputDiscount" class="col-sm-2 col-form-label">Potongan Diskon</label>
                 <div class="col-sm-3">
                 <input type="number" class="form-control" name="diskon" placeholder="Masukkan Nilai Diskon">
                 </div>
-            </div><br> -->
+            </div><br>
             <div>
-                <button type="submit" class="btn btn-primary mb-4" name="tambah" value="Input">Input</button>
+                <button type="submit" class="btn btn-primary mb-4" name="input" value="Input">Input</button>
             </div>
         </form>
     </div>
 <?php
+if (isset($_POST['input'])){
+    $diskon=$_POST['diskon'];
+    $syarat=400000;
+    $total=$harga_barang-$harga_barang*$diskon/100;
+
+    if ($harga_barang>=$syarat)
+        echo "Anda mendapat diskon $diskon%, total harga setelah diskon $total";
+    else
+        echo "Anda tidak mendapat diskon";
+}
+
 include'assets/footer.php';
 include'assets/js.php';
 ?>
 </body>
 </html>
-
-<?php
-if (isset($_POST['tambah'])){
-    $harga=$_POST['harga'];
-    $diskon=$_POST['diskon'];
-    $syarat=400000;
-    $total=$harga-$harga*$diskon/100;
-}
-
-if ($harga>=$syarat)
-    echo "Anda mendapat diskon $diskon%, harga setelah diskon $total";
-else
-    echo "Anda tidak mendapat diskon";
-
-?>

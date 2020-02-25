@@ -1,7 +1,7 @@
 <?php
 include"../koneksi/koneksi.php";
 
-    if (isset($_POST['tambah'])){
+    if (isset($_POST['input'])){
         $id=uniqid();
         $nama_barang=$_POST['barang'];
         $harga_barang=$_POST['harga'];
