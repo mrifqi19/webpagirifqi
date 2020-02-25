@@ -1,14 +1,26 @@
 <?php
-if (isset($_POST['tambah'])){
-    $harga=$_POST['harga'];
-    $diskon=$_POST['diskon'];
-    $syarat=400000;
-    $total=$harga-$harga*$diskon/100;
-}
+include"../koneksi/koneksi.php";
 
-if ($harga>=$syarat)
-    echo "Anda mendapat diskon $diskon%, harga setelah diskon $total";
-else
-    echo "Anda tidak mendapat diskon";
+    if (isset($_POST['tambah'])){
+        $id=uniqid();
+        $nama_barang=$_POST['barang'];
+        $harga_barang=$_POST['harga'];
+        $stok_barang=$_POST['stok'];
+        $kategori_barang=$_POST['kategori'];
 
+        $input=mysqli_query($koneksi,"INSERT INTO barang VALUES('$id','$nama_barang','$harga_barang','$stok_barang','$kategori_barang')") or die (mysqli_error($input));
+
+        if ($input){
+            echo"
+            <script>
+                alert('Barang Berhasil Diinput',window.location.href='../diskon_mysql.php')
+            </script>";
+        }
+        elseif ($input){
+            echo "
+            <script>
+                alert('Barang Gagal Diinput',window.location.href='../diskon_mysql.php')
+            </script>";
+        }
+    }
 ?>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>ACCOUNT</title>
     <link rel="stylesheet" href="assets/login.css">
 </head>
 <body>
@@ -35,7 +35,7 @@
             Sign Up
             <span class="underline"></span>
         </button>
-        <form class="form form-signup">
+        <form class="form form-signup" action="proses/proses_signup.php" method="POST">
             <fieldset>
             <legend>Please, enter your username, email, password and password confirmation for sign up.</legend>
             <div class="input-block">
@@ -71,3 +71,7 @@
     <script src="assets/login.js"></script>
 </body>
 </html>
+<script>
+alert('Account Successfully Created')window.location.href='../teslogin.php'
+</script>
+";
