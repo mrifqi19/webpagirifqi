@@ -1,6 +1,8 @@
 <?php
-error_reporting(0);
+include"../koneksi/koneksi.php";
+
 if (isset($_POST['tambah'])){
+    $id=uniqid();
     $nama = $_POST['nama'];
     $nim = $_POST['nim'];
     $jurusan = $_POST['jurusan'];
@@ -12,23 +14,34 @@ if (isset($_POST['tambah'])){
     $b = 72;
     $c = 65;
     $d = 50;
-    $e = 0;
     $nilai = ($harian*0.1) + ($quiz*0.15) + ($uts*0.35) + ($uas*0.4);
-    
-    echo "Nama Saya $nama<br>";
-    echo "$nim<br>";
-    echo "Jurusan $jurusan<br>";
+
     if ($nilai <= $d)
-        echo "Dengan Jumlah Nilai $nilai, Memperoleh Grade E";
+        $grade="E";
     else if ($nilai <= $c)
-        echo "Dengan Jumlah Nilai $nilai, Memperoleh Grade D";
+        $grade="D";
     else if ($nilai <= $b)
-        echo "Dengan Jumlah Nilai $nilai, Memperoleh Grade C";
+        $grade="C";
     else if ($nilai <= $a) 
-        echo "Dengan Jumlah Nilai $nilai, Memperoleh Grade B";
+        $grade="B";
     else if ($nilai > $a)
-        echo "Dengan Jumlah Nilai $nilai, Memperoleh Grade A";
+        $grade="A";
     else
         echo "Nilai Belum Terisi";
+
+    $submit=mysqli_query($koneksi,"INSERT INTO mahasiswa VALUES('$id','$nama','$nim','$jurusan','$harian','$quiz','$uts','$uas','$nilai','$grade')") or die (mysqli_error($submit));
+    
+    if ($submit){
+        echo"
+        <script>
+            alert('Nilai Berhasil Diinput',window.location.href='../mysql_nilai.php')
+        </script>";
+    }
+    elseif ($submit){
+        echo "
+        <script>
+            alert('Nilai Gagal Diinput',window.location.href='../mysql_nilai.php')
+        </script>";
+    }
 }
 ?>
