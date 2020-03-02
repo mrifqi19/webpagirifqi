@@ -16,7 +16,7 @@ include"../koneksi/koneksi.php";
         if($signup){
             echo"
             <script>
-                alert('Account Successfully Created',window.location.href='../index_mysql.php')
+                alert('Account Successfully Created',window.location.href='../mysql_login.php')
             </script>";
             // echo"Account Successfully Created";
         }

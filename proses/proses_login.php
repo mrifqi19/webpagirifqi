@@ -1,7 +1,8 @@
 <?php
+session_start();
 include"../koneksi/koneksi.php";
 
-    if(isset($_POST['login'])){
+if(isset($_POST['login'])){
         $username=$_POST['username'];
         $password=$_POST['password'];
 
@@ -17,17 +18,28 @@ include"../koneksi/koneksi.php";
                 $_SESSION['username']=$data['username'];
                 $_SESSION['level']=$data['level'];
                 $_SESSION['status']='login';
-                header('location:../index.php');
+                echo"
+                <script>
+                    alert('Anda Telah Login',window.location.href='../index.php')
+                </script>";
+            // header('location:../index.php');
             }
             elseif($data['level']=="user"){
                 $_SESSION['username']=$data['username'];
                 $_SESSION['level']=$data['level'];
                 $_SESSION['status']='login';
-                header('location:../bootstrap_nilai.php');
+                echo"
+                <script>
+                    alert('Anda Telah Login',window.location.href='../index.php')
+                </script>";
+                // header('location:../mysql_nilai.php');
             }
         }
         else{
-        echo"Login Gagal";
+            echo"
+            <script>
+                alert('Username dan Password Salah',window.location.href='../mysql_login.php')
+            </script>";
         }
     }
 ?>

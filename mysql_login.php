@@ -57,8 +57,8 @@
             <div class="input-block">
                 <label for="signup-level">Level</label>
                 <select name="level" id="signup-level">
-                    <option value="admin">Admin</option>
-                    <option value="user">User</option>
+                    <option value="admin">User</option>
+                    <option value="user">Admin</option>
                 </select>
             </div>
             </fieldset>
@@ -71,7 +71,3 @@
     <script src="assets/login.js"></script>
 </body>
 </html>
-<script>
-alert('Account Successfully Created')window.location.href='../teslogin.php'
-</script>
-";

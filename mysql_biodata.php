@@ -13,11 +13,17 @@
     include'assets/navbar.php';
     ?><br>
     <div class="container-fluid">
-        <form action="proses/proses_biodata.php" method="POST">
+        <form action="proses/proses_biodata.php" method="POST" enctype="multipart/form-data">
             <div class="form-group row">
                 <label for="inputName" class="col-sm-2 col-form-label">Nama Lengkap</label>
                 <div class="col-sm-3">
                 <input type="text" class="form-control" name="nama" placeholder="Masukkan Nama Lengkap">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputPhoto" class="col-sm-2 col-form-label">Foto Profil</label>
+                <div class="col-sm-3">
+                <input type="file" name="foto">
                 </div>
             </div>
             <div class="form-group row">
@@ -29,14 +35,16 @@
             <div class="form-group row">
                 <label for="inputDate" class="col-sm-2 col-form-label">Tanggal Lahir</label>
                 <div class="col-sm-3">
-                <input type="date" class="form-control" name="tanggal" placeholder="">
+                <input type="date" class="form-control" name="tanggal">
                 </div>
             </div>
             <div class="form-group row">
                 <label for="inputGender" class="col-sm-2 col-form-label">Jenis Kelamin</label>
                 <div class="col-sm-3">
-                <input type="radio" name="jk" value="Laki-Laki">Laki-laki<br>
-                <input type="radio" name="jk" value="Perempuan">Perempuan
+                <select class="form-control" name="jk" id="inputGender">
+                    <option value="Laki-Laki">Laki-laki</option>
+                    <option value="Perempuan">Perempuan</option>
+                </select>
                 </div>
             </div>
             <div class="form-group row">
