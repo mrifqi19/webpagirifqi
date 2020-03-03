@@ -25,6 +25,9 @@ error_reporting(0);
         $hobi5 = $_POST['hobi5'];
         $hobi = ($hobi1.','.$hobi2.','.$hobi3.','.$hobi4.','.$hobi5);
 
+        $lokasi_upload="../upload/";
+        $fungsi_upload=move_uploaded_file($foto_temp,$lokasi_upload.$md5foto);
+
         $submit=mysqli_query($koneksi,"INSERT INTO biodata VALUES('$id','$nama','$md5foto','$tempat_lahir','$tanggal_lahir','$jk','$alamat','$email','$hp','$hobi')") or die (mysqli_error($submit));
         
         if ($submit){
