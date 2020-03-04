@@ -28,17 +28,6 @@ include'../koneksi/koneksi.php';
                 <!-- ============================================================== -->
                 <!-- Start Page Content -->
                 <!-- ============================================================== -->
-                <?php
-                    $biodata=mysqli_query($koneksi,"SELECT * FROM biodata") or die (mysqli_error($biodata));
-
-                    if(mysqli_num_rows($biodata==0)){
-                        echo"<tr>Biodata Kosong</tr>";
-                    }
-                    else {
-                        while($data=mysqli_fetch_assoc($biodata));
-                    }
-                    
-                ?>
                 <div class="row">
                     <!-- column -->
                     <div class="col-12">
@@ -62,14 +51,39 @@ include'../koneksi/koneksi.php';
                                                 <th>Hobi</th>
                                             </tr>
                                         </thead>
+
+                                        <?php
+                                            $biodata=mysqli_query($koneksi,"SELECT * FROM biodata") or die (mysqli_error($biodata));
+
+                                            if(mysqli_num_rows($biodata)==0){
+                                                echo"<tr>Biodata Kosong</tr>";
+                                            }
+                                            else {
+                                                $no=1;
+                                                while($data=mysqli_fetch_assoc($biodata)){
+                                        ?>
+
                                         <tbody>
                                             <tr>
-                                                <td>1</td>
-                                                <td>Deshmukh</td>
-                                                <td>Prohaska</td>
-                                                <td>@Genelia</td>
+                                                <td><?php echo $no;?></td>
+                                                <td><?php echo "<img src='../upload/".$data['foto']."' width='25px'>";?></td>
+                                                <td><?php echo $data['nama'];?></td>
+                                                <td><?php echo $data['jenis_kelamin'];?></td>
+                                                <td><?php echo $data['tempat_lahir'];?></td>
+                                                <td><?php echo $data['tanggal_lahir'];?></td>
+                                                <td><?php echo $data['alamat'];?></td>
+                                                <td><?php echo $data['email'];?></td>
+                                                <td><?php echo $data['hp'];?></td>
+                                                <td><?php echo $data['hobi'];?></td>
                                             </tr>
                                         </tbody>
+
+                                        <?php
+                                                $no++;
+                                                }
+                                            }
+                                        ?>
+
                                     </table>
                                 </div>
                             </div>
@@ -77,14 +91,14 @@ include'../koneksi/koneksi.php';
                     </div>
                 </div>
                 <!-- ============================================================== -->
-                <!-- End PAge Content -->
+                <!-- End Page Content -->
                 <!-- ============================================================== -->
             </div>
             <!-- ============================================================== -->
             <!-- End Container fluid  -->
             <!-- ============================================================== -->
             <!-- ============================================================== -->
-            <!-- footer -->
+            <!-- Footer -->
             <!-- ============================================================== -->
             <footer class="footer">
                 © 2018 Adminwrap by wrappixel.com
