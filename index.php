@@ -3,82 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOME</title>
-    <?php
-    include'assets/css.php';
-    ?>
+    <title>ACCOUNT</title>
+    <link rel="stylesheet" href="assets/login.css">
 </head>
 <body>
-<?php
-include'assets/navbar.php';
-?>
-<!-- SLIDER -->
-    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-            <center><div class="carousel-item active">
-                <img src="html/img/1.jpg" class="d-block w-50" alt="...">
+    <section class="forms-section">
+    <h1 class="section-title">Hana Nan</h1>
+    <div class="forms">
+        <div class="form-wrapper is-active">
+        <button type="button" class="switcher switcher-login">
+            Login
+            <span class="underline"></span>
+        </button>
+        <form class="form form-login" action="proses/proses_login.php" method="POST">
+            <fieldset>
+            <legend>Please, enter your email and password for login.</legend>
+            <div class="input-block">
+                <label for="login-username">Username</label>
+                <input id="login-username" type="text" name="username" placeholder="Masukkan Username Anda" required>
             </div>
-            <div class="carousel-item">
-                <img src="html/img/2.png" class="d-block w-50" alt="...">
+            <div class="input-block">
+                <label for="login-password">Password</label>
+                <input id="login-password" type="password" name="password" placeholder="Masukkan Password Anda" required>
             </div>
-            <div class="carousel-item">
-                <img src="html/img/3.jpg" class="d-block w-50" alt="...">
-            </div></center>
+            </fieldset>
+            <button type="submit" class="btn-login" name="login" value="Login">Login</button>
+        </form>
         </div>
-    </div><br>
-<!-- TABLE -->
-    <table class="container table">
-        <thead class="thead-light">
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
-            </tr>
-        </tbody>
-    </table>
-<!-- TEXT -->
-    <div class="container-fluid">
-        <center>
-        <div class="row">
-            <div class="col">
-                <h1>Halo</h1>
+        <div class="form-wrapper" action="proses/proses_signup.php" method="POST">
+        <button type="button" class="switcher switcher-signup">
+            Sign Up
+            <span class="underline"></span>
+        </button>
+        <form class="form form-signup" action="proses/proses_signup.php" method="POST">
+            <fieldset>
+            <legend>Please, enter your username, email, password and password confirmation for sign up.</legend>
+            <div class="input-block">
+                <label for="signup-name">Nama Lengkap</label>
+                <input id="signup-name" type="text" name="nama_user" placeholder="Masukkan Nama Anda"required>
             </div>
-            <div class="col">
-                <h1>Hai</h1>
+            <div class="input-block">
+                <label for="signup-username">Username</label>
+                <input id="signup-username" type="text" name="username" placeholder="Masukkan Username Anda"required>
             </div>
-            <div class="col">
-                <h1>Pie</h1>
+            <div class="input-block">
+                <label for="signup-email">E-mail</label>
+                <input id="signup-email" type="email" name="email" placeholder="Masukkan Email Anda"required>
             </div>
-            <div class="col">
-                <h1>Kabare</h1>
+            <div class="input-block">
+                <label for="signup-password">Password</label>
+                <input id="signup-password" type="password" name="password" placeholder="Masukkan Password Anda"required>
             </div>
+            <div class="input-block">
+                <label for="signup-level">Level</label>
+                <select name="level" id="signup-level">
+                    <option value="admin">User</option>
+                    <option value="user">Admin</option>
+                </select>
+            </div>
+            </fieldset>
+            <button type="submit" class="btn-signup" name="signup">Sign Up</button>
+        </form>
         </div>
-        </center>
     </div>
-    <?php
-    include'assets/footer.php';
-    include'assets/js.php';
-    ?>
+    </section>
+
+    <script src="assets/login.js"></script>
 </body>
 </html>

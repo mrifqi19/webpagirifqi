@@ -20,7 +20,7 @@ if(isset($_POST['login'])){
                 $_SESSION['status']='login';
                 echo"
                 <script>
-                    alert('Anda Telah Login',window.location.href='../index.php')
+                    alert('Anda Telah Login',window.location.href='../home.php')
                 </script>";
             // header('location:../index.php');
             }
@@ -30,7 +30,7 @@ if(isset($_POST['login'])){
                 $_SESSION['status']='login';
                 echo"
                 <script>
-                    alert('Anda Telah Login',window.location.href='../index.php')
+                    alert('Anda Telah Login',window.location.href='../home.php')
                 </script>";
                 // header('location:../mysql_nilai.php');
             }
@@ -38,7 +38,7 @@ if(isset($_POST['login'])){
         else{
             echo"
             <script>
-                alert('Username dan Password Salah',window.location.href='../mysql_login.php')
+                alert('Username dan Password Salah',window.location.href='../index.php')
             </script>";
         }
     }
