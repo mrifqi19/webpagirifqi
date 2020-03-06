@@ -15,10 +15,10 @@ include'../koneksi/koneksi.php';
                 <!-- ============================================================== -->
                 <div class="row page-titles">
                     <div class="col-md-5 align-self-center">
-                        <h3 class="text-themecolor">Table Basic</h3>
+                        <h3 class="text-themecolor">Tabel Biodata</h3>
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                            <li class="breadcrumb-item active">Table Basic</li>
+                            <li class="breadcrumb-item active">Tabel Biodata</li>
                         </ol>
                     </div>
                 </div>

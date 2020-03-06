@@ -37,6 +37,9 @@
 </head>
 
 <body class="fix-header fix-sidebar card-no-border">
+<?php
+session_start();
+?>
     <!-- ============================================================== -->
     <!-- Preloader - style you can find in spinners.css -->
     <!-- ============================================================== -->
@@ -99,7 +102,7 @@
                         <!-- Profile -->
                         <!-- ============================================================== -->
                         <li class="nav-item dropdown u-pro">
-                            <a class="nav-link dropdown-toggle waves-effect waves-dark profile-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/users/1.jpg" alt="user" class="" /> <span class="hidden-md-down">Mark Sanders &nbsp;</span> </a>
+                            <a class="nav-link dropdown-toggle waves-effect waves-dark profile-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../assets/img/3x4.jpg" alt="user" class="" /> <span class="hidden-md-down">Muhammad Rifqi &nbsp;</span></a>
                         </li>
                     </ul>
                 </div>
@@ -121,7 +124,7 @@
                         </li>
                         <li> <a class="waves-effect waves-dark" href="biodata.php" aria-expanded="false"><i class="fa fa-user-circle-o"></i><span class="hide-menu">Biodata</span></a>
                         </li>
-                        <li> <a class="waves-effect waves-dark" href="table-biodata.php" aria-expanded="false"><i class="fa fa-table"></i><span class="hide-menu">Tables</span></a>
+                        <li> <a class="waves-effect waves-dark" href="table-biodata.php" aria-expanded="false"><i class="fa fa-table"></i><span class="hide-menu">Tabel Biodata</span></a>
                         </li>
                         <li> <a class="waves-effect waves-dark" href="icon-fontawesome.php" aria-expanded="false"><i class="fa fa-smile-o"></i><span class="hide-menu">Icons</span></a>
                         </li>
@@ -130,6 +133,20 @@
                         <li> <a class="waves-effect waves-dark" href="blank.php" aria-expanded="false"><i class="fa fa-bookmark-o"></i><span class="hide-menu">Blank</span></a>
                         </li>
                         <li> <a class="waves-effect waves-dark" href="error-404.php" aria-expanded="false"><i class="fa fa-question-circle"></i><span class="hide-menu">404</span></a>
+                        </li>
+                        <li><a class="waves-effect waves-dark" aria-expanded="false"><span class="hide-menu">
+                            <?php
+                                if($_SESSION['level']=="admin"){
+                            ?>
+                                <a class="nav-link" href="../proses/proses_logout.php">Logout</a>
+                            <?php
+                                } else{
+                            ?>
+                                <a class="nav-link" href="../index.php">Login</a>
+                            <?php
+                                }
+                            ?>
+                        </span></a>
                         </li>
                     </ul>
                 </nav>

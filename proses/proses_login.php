@@ -20,7 +20,7 @@ if(isset($_POST['login'])){
                 $_SESSION['status']='login';
                 echo"
                 <script>
-                    alert('Anda Telah Login',window.location.href='../home.php')
+                    alert('Anda Telah Login',window.location.href='../admin/index.php')
                 </script>";
             // header('location:../index.php');
             }
