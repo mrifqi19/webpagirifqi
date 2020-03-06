@@ -119,7 +119,7 @@
                     <ul id="sidebarnav">
                         <li> <a class="waves-effect waves-dark" href="index.php" aria-expanded="false"><i class="fa fa-tachometer"></i><span class="hide-menu">Dashboard</span></a>
                         </li>
-                        <li> <a class="waves-effect waves-dark" href="profile.php" aria-expanded="false"><i class="fa fa-user-circle-o"></i><span class="hide-menu">Profile</span></a>
+                        <li> <a class="waves-effect waves-dark" href="biodata.php" aria-expanded="false"><i class="fa fa-user-circle-o"></i><span class="hide-menu">Biodata</span></a>
                         </li>
                         <li> <a class="waves-effect waves-dark" href="table-biodata.php" aria-expanded="false"><i class="fa fa-table"></i><span class="hide-menu">Tables</span></a>
                         </li>
